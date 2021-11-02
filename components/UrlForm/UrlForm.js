@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     getImg () {
-      axios.get('ttps://api-etiennemoureton.herokuapp.com/img/' + this.inputUrl + '.png')
+      axios.get('https://api-etiennemoureton.herokuapp.com/img/' + this.inputUrl + '.png')
         .then(() => {
           this.imgLoaded = true
           this.UPDATE_PLANE()
