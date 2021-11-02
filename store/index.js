@@ -77,7 +77,7 @@ export const mutations = {
 
   UPDATE_PLANE (state) {
     console.log(state.scene.getObjectByName('myCube'))
-    const texture = new TextureLoader().load('http://localhost:5000/img/' + state.url + '.png')
+    const texture = new TextureLoader().load('https://api-etiennemoureton.herokuapp.com/img/' + state.url + '.png')
     const materialArray = new MeshBasicMaterial({ map: texture, transparent: true, side: DoubleSide })
     state.scene.getObjectByName('myCube').material = materialArray
     state.renderer.render(state.scene, state.camera)
